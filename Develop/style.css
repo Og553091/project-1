@@ -24,3 +24,43 @@ text-align: center;
 
 
 }
+main{
+display: flex;
+
+
+
+
+}
+.smallherocontainer{
+display: inline-block;
+
+
+
+
+
+
+}
+
+
+.container-1{
+display: flex;
+margin-top: 50px;
+margin-left: 100px;
+margin-right: 100px;
+
+}
+.section{
+border: 5px solid black;
+height: 400px;
+margin: 15px;
+
+padding: 0 0 10px 0;
+}
+.largeSection{
+padding: 0
+
+
+
+
+
+}
