@@ -21,6 +21,12 @@ $(document).ready(function () {
                     .then(response => response.json())
                     .then(data => {
                         console.log(data);
+                        const ulElement = document.getElementById("ingredient-list");
+                        // Create a new list item
+                        const listItem = document.createElement("li");
+                        listItem.textContent = data.ingredients[0].text + "-" + data.calories + " calories";
+                        // Append the new list item to the ol element
+                        ulElement.appendChild(listItem);
                     })
                 }
             })
