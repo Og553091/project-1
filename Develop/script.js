@@ -1,31 +1,53 @@
 $(document).ready(function () {
+    function replaceSpaces(str) {
+        return str.replace(/\s/g, "%20");
+      }
+
     $("#search").click(function (event) {
         //recpie api documentation link: https://developer.edamam.com/edamam-docs-recipe-api
-        
+
         var recipeName = $("#recipeField").val();
         fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + recipeName + '&app_id=271c8225&app_key=5374f74deef33c98c857b98a7d45851d')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-
-        //need to figure out a way to consolidate portion measurement or find other nutrition api that handles cups/other volume based measures (myfitnesspal?)
-
-
-
-
-        fetch('https://nutrition-api.esha.com/nutrients/api/foods?query=olive%20oil&count=&start=&spell=&')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-
-
-
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (let i = 0; i < data.hits[0].recipe.ingredients.length; i++) {
+                    var ingredient = replaceSpaces(data.hits[0].recipe.ingredients[i].food)
+                    var ingredientUnit = data.hits[0].recipe.ingredients[i].measure
+                    var ingredientAmount = data.hits[0].recipe.ingredients[i].quantity
+                    var ingredientAPI = ingredientAmount + "%20" + ingredientUnit + "%20" + ingredient;
+                    console.log(ingredientAPI);
+                    fetch('https://api.edamam.com/api/nutrition-data?app_id=cf29f7ff&app_key=84d1ca10c101b0b3508890c74ce78779&nutrition-type=cooking&ingr=' + ingredientAPI)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                    })
+                }
+            })
 
 
 
 
+            
+
+
+
+
+
+            // var query = data.hits[0].recipe.ingredients[i]
+            // $.ajax({
+            //     method: 'GET',
+            //     url: 'https://api.api-ninjas.com/v1/nutrition?query=' + query,
+            //     headers: { 'X-Api-Key': 'BHHPgWSWEz7qCU3ZzHhwlw==QvCiKSXoC0vCl8vL' },
+            //     contentType: 'application/json',
+            //     success: function (result) {
+            //         console.log(result);
+            //     },
+            //     error: function ajaxError(jqXHR) {
+            //         console.error('Error: ', jqXHR.responseText);
+            //     }
+
+            // });
 
 
 
