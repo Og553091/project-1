@@ -25,14 +25,14 @@ text-align: center;
 
 }
 main{
-display: flex;
+
 
 
 
 
 }
 .smallherocontainer{
-display: inline-block;
+display: flex;
 
 
 
@@ -42,12 +42,17 @@ display: inline-block;
 }
 
 
+
+
+
+
 .container-1{
-display: flex;
+
 margin-top: 50px;
 margin-left: 100px;
 margin-right: 100px;
 
+    width: 920px;
 }
 .section{
 border: 5px solid black;
@@ -58,6 +63,24 @@ padding: 0 0 10px 0;
 }
 .largeSection{
 padding: 0
+
+
+
+
+
+}
+.largecolumn1{
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+
+
+}
+.largecolumn2{
+grid-column-start: 3;
+grid-column-end: -1;
 
 
 
