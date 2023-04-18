@@ -71,10 +71,17 @@ body {
 
 }
 
-.largecolumn2 {
-    grid-column-start: 3;
-    grid-column-end: -1;
 
+   
+ 
+
+
+
+
+
+
+#ingredient-list-container{
+height: auto;
 
 
 
