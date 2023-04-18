@@ -18,11 +18,13 @@
 
 }
 
+body{
+    background: url(../Images/healthy-eating.jpg)
+}
+
 .searchbar {
     text-align: center;
 }
-
-main {}
 
 .smallherocontainer {
     display: flex;
@@ -31,12 +33,12 @@ main {}
 
 #ingredient-list-container {
     padding: 25px;
+    background-color: white;
 }
 
 
 
 .container-1 {
-
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
