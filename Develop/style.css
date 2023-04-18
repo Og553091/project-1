@@ -18,8 +18,10 @@
 
 }
 
-body{
+body {
+    align-items: center;
     background: url(../Images/healthy-eating.jpg)
+    
 }
 
 .searchbar {
@@ -44,6 +46,7 @@ body{
     margin-right: 100px;
 
     width: 920px;
+    text-align: center;
 }
 
 .section {
