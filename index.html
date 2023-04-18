@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="Develop/style.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <title>Nutrition Checker</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="Develop/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <title>Nutrition Checker</title>
 </head>
+
 <body>
 
-    <section class="hero is-info">
+  <section class="hero is-info">
     <div class="hero-body">
       <p class="title">
         Nutrition Checker
       </p>
       <p class="subtitle">
-        Search for your favorite foods to find recipes and their nutritional facts 
+        Search for your favorite foods to find recipes and their nutritional facts
       </p>
     </div>
   </section>
@@ -27,44 +29,49 @@
   <br>
 
   <section class="searchbar">
-  <div class="control">
-    <input id="recipeField" class="input is-medium" type="text" placeholder="Find a Recipe">
-   
-  </div>
-  <button id="search" class="button">Search</button>
-  </section>
+    <div class="control">
+      <input id="recipeField" class="input is-medium" type="text" placeholder="Find a Recipe">
 
-
-
-<main class="">
-  
-<div class="container-1">
-  <section class="hero is-success">
-    <div class="hero-body">
-      <p class="title">
-        Ingredients and Nutrition
-      </p>
-     
-      
     </div>
+    <button id="search" class="button">Search</button>
   </section>
-  <section id="ingredient-list-container" class="section is-large largeSection largecolumn1">
-    
-    <ul id="ingredient-list">
-
-    </ul>
-    
-    
-  </section>
-</section>
-
-  
-</div>
 
 
 
+  <main class="">
 
-</main>
+    <div class="container-1">
+      <section class="hero is-success">
+        <div class="hero-body">
+          <p class="title">
+            Ingredients and Nutrition
+          </p>
+
+
+        </div>
+      </section>
+
+      <section id="body-container" class="container-1"></section>
+        <section id="button-container">
+          
+        </section>
+        <section id="ingredient-list-container" class="section is-large largeSection largecolumn1">
+
+          <ul id="ingredient-list">
+
+          </ul>
+
+
+        </section>
+      </section>
+
+
+    </div>
+
+
+
+
+  </main>
 
 
 
@@ -74,9 +81,9 @@
 
 
 
-</div>
+  </div>
 
-    <script src="Develop/script.js"></script>  
+  <script src="Develop/script.js"></script>
 </body>
 
 
