@@ -19,7 +19,6 @@
 }
 
 body {
-    align-items: center;
     background: url(../Images/healthy-eating.jpg)
     
 }
@@ -27,6 +26,7 @@ body {
 .searchbar {
     text-align: center;
 }
+
 
 .smallherocontainer {
     display: flex;
@@ -38,13 +38,19 @@ body {
     background-color: white;
 }
 
-
+#button-container{
+    border: none;
+    padding: 10px 300px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+}
 
 .container-1 {
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-
+    margin-left: 200px;
+    /* margin-right: 100px; */
+    
     width: 920px;
     text-align: center;
 }
