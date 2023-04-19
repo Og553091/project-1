@@ -36,11 +36,13 @@ body {
 #ingredient-list-container {
     padding: 25px;
     background-color: white;
+    height: auto;
 }
 
 #button-container{
     border: none;
     padding: 10px 300px;
+    margin-left: 500px;
     text-align: center;
     display: inline-block;
     font-size: 20px;
@@ -48,7 +50,7 @@ body {
 
 .container-1 {
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 500px;
     /* margin-right: 100px; */
     
     width: 920px;
@@ -86,10 +88,10 @@ body {
 
 
 
-#ingredient-list-container{
+/* #ingredient-list-container{
 height: auto;
 
 
 
 
-}
+} */
