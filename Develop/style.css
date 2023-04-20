@@ -34,7 +34,7 @@ body {
 
 
 #ingredient-list-container {
-    padding: 25px;
+    padding: 80px;
     background-color: white;
 }
 
@@ -49,10 +49,13 @@ body {
 .container-1 {
     margin-top: 50px;
     margin-left: 200px;
-    /* margin-right: 100px; */
+     margin-right: 200px; 
     
-    width: 920px;
+  
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .section {
