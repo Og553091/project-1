@@ -39,6 +39,11 @@ $(document).ready(function () {
         });
       }
 
+      var carbs = 0;
+      var protein = 0;
+      var fat = 0;
+
+
     function retrieveRecipe(recipeName) {
         fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + recipeName + '&app_id=271c8225&app_key=5374f74deef33c98c857b98a7d45851d')
         .then(response => response.json())
@@ -55,10 +60,13 @@ $(document).ready(function () {
                         .then(response => response.json())
                         .then(data => {
                             console.log(data);
+                            carbs = data.totalNutrients.CHOCDF.quantity;
+                            fat = data.totalNutrients.FAT.quantity;
+                            protein = data.totalNutrients.PROCNT.quantity;
                             const ulElement = document.getElementById("ingredient-list");
                             // Create a new list item
                             const listItem = document.createElement("li");
-                            listItem.textContent = data.ingredients[0].text + " - " + data.calories + " calories";
+                            listItem.textContent = data.ingredients[0].text + " - " + data.calories + " calories" + " - " + carbs.toFixed(2) + " C - " + fat.toFixed() + " F - " + protein.toFixed(2) + " P";
                             // Append the new list item to the ol element
                             ulElement.appendChild(listItem);
                         })
